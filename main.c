@@ -63,7 +63,7 @@ int main () {
     for (i = 0; i < 5; i++) {
         printf("\nEstudiante %s:\n", estudiante[i]);
         for (j = 0; j < 3; j++) {
-            printf("  Asignatura %d: %.2f\n", j + 1, notas[i][j]);
+            printf("  Asignatura %s: %.2f\n", asignaturas[j], notas[i][j]);
         }
         printf("Promedio Total: %.2f\n", promedio[i]);
     }
@@ -74,7 +74,7 @@ int main () {
 
     for ( j = 0; j < 3; j++)
     {
-        printf("\nAsignatura %i", j + 1);
+        printf("\nAsignatura %s", asignaturas[j]);
         printf(": %.2f", asigT[j]);
     }
     
@@ -83,7 +83,7 @@ int main () {
    printf("\n===================================================");
 
     for (j = 0; j < 3; j++) {
-        printf("\nAsignatura %i:\n", j + 1);
+        printf("\nAsignatura %s:\n", asignaturas[j]);
         printf("  Nota mas alta: %.2f\n", notaAlt[j]);
         printf("  Nota mas baja: %.2f\n", notaBaj[j]);
     }
@@ -95,7 +95,7 @@ int main () {
     for ( j = 0; j < 3; j++)
     {
         printf("\n");
-        printf("\nAsignatura %i:", j + 1);
+        printf("\nAsignatura %s:", asignaturas[j]);
         aprobados = 0;
         reprobados = 0;
     for (i = 0; i < 5; i++) {
