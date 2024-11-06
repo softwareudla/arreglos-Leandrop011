@@ -4,6 +4,7 @@ int main () {
     char estudiante[5][100];
     int asignaturas [3];
     float notas[5][3], suma = 0, promedio[5], asigT[3], sum = 0;
+    float notaAlt[3], notaBaj[3];
     int i, j;
     for ( i = 0; i < 5; i++)
     {
@@ -11,18 +12,29 @@ int main () {
     }
 
     
-     for ( j = 0; j < 3; j++)
-    {
-        printf("Por favor Ingrese las Notas de la Asignatura %i", j + 1);
+    for (j = 0; j < 3; j++) {
+        printf("\nPor favor Ingrese las Notas de la Asignatura %i\n", j + 1);
         sum = 0;
-        for ( i = 0; i < 5; i++)
-        {
-            printf("\nEstudiante %s- ", estudiante[i]);
+        
+   
+        notaAlt[j] = -1;
+        notaBaj[j] = 11;
+
+        for (i = 0; i < 5; i++) {
+            printf("Estudiante %s - ", estudiante[i]);
             scanf("%f", &notas[i][j]);
             sum = sum + notas[i][j];
+
+            if (notas[i][j] > notaAlt[j]) {
+                notaAlt[j] = notas[i][j];
+            }
+            if (notas[i][j] < notaBaj[j]) {
+                notaBaj[j] = notas[i][j];
+            }
         }
-         asigT[j] = sum / 5 ;
+        asigT[j] = sum / 5; 
     }
+
 
      for (i = 0; i < 5; i++) {
         suma = 0;
@@ -56,6 +68,15 @@ int main () {
         printf(": %.2f", asigT[j]);
     }
     
+   printf("\n==================================================="); 
+   printf("\nEl Nota mas alta y baja de cada Asignatura:  ");
+   printf("\n===================================================");
+
+    for (j = 0; j < 3; j++) {
+        printf("\nAsignatura %i:\n", j + 1);
+        printf("  Nota mas alta: %.2f\n", notaAlt[j]);
+        printf("  Nota mas baja: %.2f\n", notaBaj[j]);
+    }
 
     
     return 0;
