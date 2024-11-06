@@ -34,9 +34,9 @@ int main () {
        
     }
 
-    printf("\n========================================================"); 
-    printf("\nEl promedio de cada estudiantes por asignatura es: ");
-    printf("\n========================================================");  
+    printf("\n===================================================================="); 
+    printf("\nEl promedio total de cada estudiantes segun sus notas de asignaturas es: ");
+    printf("\n====================================================================");  
 
     for (i = 0; i < 5; i++) {
         printf("\nEstudiante %s:\n", estudiante[i]);
@@ -46,9 +46,9 @@ int main () {
         printf("Promedio Total: %.2f\n", promedio[i]);
     }
 
-   printf("\n========================================================"); 
-   printf("\nEl promedio por asignatura de todos los estudiantes es: ");
-   printf("\n========================================================"); 
+   printf("\n==================================================================="); 
+   printf("\nEl promedio de las asignatura segun las notas de los estudiantes es: ");
+   printf("\n==================================================================="); 
 
     for ( j = 0; j < 3; j++)
     {
