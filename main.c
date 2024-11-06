@@ -16,8 +16,7 @@ int main () {
     for (j = 0; j < 3; j++) {
         printf("\nPor favor Ingrese las Notas de la Asignatura de %s\n", asignaturas[j]);
         sum = 0;
-        
-   
+    
         notaAlt[j] = -1;
         notaBaj[j] = 11;
 
@@ -52,8 +51,7 @@ int main () {
             suma = suma + notas[i][j]; 
         }
 
-        promedio[i] = suma / 3.0; 
-       
+        promedio[i] = suma / 3.0;
     }
 
     printf("\n===================================================================="); 
