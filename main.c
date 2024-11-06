@@ -2,7 +2,8 @@
 #include <string.h>
 int main () {
     char estudiante[5][100];
-    int asignaturas [3], aprobados, reprobados;
+    char asignaturas [3][100] = {"calculo", "fisica", "biologia"};
+    int  aprobados, reprobados;
     float notas[5][3], suma = 0, promedio[5], asigT[3], sum = 0;
     float notaAlt[3], notaBaj[3];
     int i, j;
@@ -13,7 +14,7 @@ int main () {
 
     
     for (j = 0; j < 3; j++) {
-        printf("\nPor favor Ingrese las Notas de la Asignatura %i\n", j + 1);
+        printf("\nPor favor Ingrese las Notas de la Asignatura de %s\n", asignaturas[j]);
         sum = 0;
         
    
@@ -21,7 +22,7 @@ int main () {
         notaBaj[j] = 11;
 
          for (i = 0; i < 5; i++) {
-            
+
             do {
                 printf("Estudiante %s - ", estudiante[i]);
                 scanf("%f", &notas[i][j]);
