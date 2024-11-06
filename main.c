@@ -20,11 +20,20 @@ int main () {
         notaAlt[j] = -1;
         notaBaj[j] = 11;
 
-        for (i = 0; i < 5; i++) {
-            printf("Estudiante %s - ", estudiante[i]);
-            scanf("%f", &notas[i][j]);
-            sum = sum + notas[i][j];
+         for (i = 0; i < 5; i++) {
+            
+            do {
+                printf("Estudiante %s - ", estudiante[i]);
+                scanf("%f", &notas[i][j]);
 
+                if (notas[i][j] < 0 || notas[i][j] > 10) {
+                    printf("Nota invalida. Ingrese una nota entre 0 y 10.\n");
+                }
+            } while (notas[i][j] < 0 || notas[i][j] > 10);
+
+            sum  = sum + notas[i][j];
+
+           
             if (notas[i][j] > notaAlt[j]) {
                 notaAlt[j] = notas[i][j];
             }
