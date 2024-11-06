@@ -2,7 +2,7 @@
 #include <string.h>
 int main () {
     char estudiante[5][100];
-    int asignaturas [3];
+    int asignaturas [3], aprobados, reprobados;
     float notas[5][3], suma = 0, promedio[5], asigT[3], sum = 0;
     float notaAlt[3], notaBaj[3];
     int i, j;
@@ -78,6 +78,27 @@ int main () {
         printf("  Nota mas baja: %.2f\n", notaBaj[j]);
     }
 
-    
+    printf("\n=================================================================="); 
+    printf("\nCantidad de Estudiantes Aprobados y Reprobados de cada Asignatura:  ");
+    printf("\n==================================================================");
+
+    for ( j = 0; j < 3; j++)
+    {
+        printf("\n");
+        printf("\nAsignatura %i:", j + 1);
+        aprobados = 0;
+        reprobados = 0;
+    for (i = 0; i < 5; i++) {
+        if (notas[i][j] >= 6)
+        {
+            aprobados = aprobados + 1;
+        }else if(notas[i][j] <= 6){
+            reprobados = reprobados + 1;
+        }  
+    }
+        printf("\nAprobados: %i estudiantes", aprobados);
+        printf("\nReprobados: %i estudiantes", reprobados);
+    }
+    printf("\n");
     return 0;
 }
